@@ -39,14 +39,14 @@ body{
     font-weight: 700;
     margin-bottom: 10px;
 }
-.tbox{
+.textbox{
     width: 100%;
     height: 40px;
     border-radius: 40px;
     overflow: hidden;
     background: #313131;
 }
-.tbox a{
+.textbox a{
     float: right;
     width: 100px;
     text-align: center;
@@ -58,7 +58,7 @@ body{
     border-radius: 40px;
     transition: 0.4s all;
 }
-.tbox input{
+.textbox input{
     border: none;
     margin: 0 14px;
     width: 372px;
@@ -68,6 +68,6 @@ body{
     outline: none;
     padding: 10px 0;
 }
-.tbox a:hover{
+.textbox a:hover{
     opacity: 0.8;
 }
