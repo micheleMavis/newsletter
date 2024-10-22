@@ -1,73 +1,81 @@
-@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    background: #313131;
-    font-family: sans-serif;
+    background: linear-gradient(to right, #8e44ad, #3498db); /* Modern gradient background */
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .box{
     background: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 500px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 12px;
-    overflow: hidden;
-    color: #313131;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+.box:hover {
+    transform: translateY(-10px); /* Subtle lift-up effect on hover */
 }
 .box span{
-    font-size: 80px;
-    height: 80px;
-    display: block;
-    line-height: 80px;
-    text-align: center;
+    font-size: 60px;
+    color: #2980b9;
+    margin-bottom: 15px;
+    display: inline-block;
 }
 .box h2{
+    font-size: 24px;
+    color: #333;
     text-transform: uppercase;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.box p{
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
+    letter-spacing: 2px;
     margin-bottom: 10px;
 }
-.textbox{
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    overflow: hidden;
-    background: #313131;
+.box p{
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
 }
-.textbox a{
-    float: right;
-    width: 100px;
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-    color: whitesmoke;
-    font-size: 20px;
-    background: #2980b9;
-    border-radius: 40px;
-    transition: 0.4s all;
+
+.textbox{
+    display: flex;
+    background: #313131;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Adding animation on focus */
 }
 .textbox input{
+    flex: 1;
+    padding: 12px 20px;
     border: none;
-    margin: 0 14px;
-    width: 372px;
-    background: none;
+    background: transparent;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
-    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+.textbox input:focus {
+    transform: scale(1.05); /* Subtle zoom on focus */
+}
+.textbox input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.textbox a{
+    display: inline-block;
+    width: 50px;
+    background: #2980b9;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    font-size: 24px;
+    transition: background 0.4s ease, transform 0.3s ease; /* Button hover effect */
 }
 .textbox a:hover{
-    opacity: 0.8;
+    background: #1abc9c; /* Changing color on hover */
+    transform: scale(1.1); /* Slight scaling */
 }
